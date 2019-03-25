@@ -1,7 +1,21 @@
 package com.cloud.springboot.service;
 
-public interface TSysUserService {
-    String getSysUser();
+import com.cloud.springboot.entity.TSysUser;
 
-    void saveSysUser(String userName, String password);
+import java.util.List;
+
+/**
+ * @Description: TSysUserService
+ * @Company: 深圳市东深电子股份有限公司
+ * @Auther: leichengyang
+ * @Date: 2019/3/21 0021
+ * @Version 1.0
+ */
+public interface TSysUserService {
+    TSysUser findByUserName(String s);
+
+    String getSysUser(String id);
+
+    List<TSysUser> getAllUsers();
+
 }

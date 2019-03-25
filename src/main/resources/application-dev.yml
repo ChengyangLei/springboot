@@ -1,12 +1,40 @@
 server:
   port: 8082
 
-spring.jpa.database: oracle
-spring.datasource.driver-class-name: oracle.jdbc.driver.OracleDriver
-spring.datasource.url: jdbc:oracle:thin:@//10.100.50.197:1521/orcl
-spring.datasource.username: c##admin
-spring.datasource.password: admin
-spring.jpa.hibernate.ddl-auto: update
+#oracle 驱动
+#spring.jpa.database: oracle
+#spring.datasource.driver-class-name: oracle.jdbc.driver.OracleDriver
+#spring.datasource.url: jdbc:oracle:thin:@//10.100.50.80:1521/orcl
+#spring.datasource.username: c##admin
+#spring.datasource.password: admin
+#spring.jpa.hibernate.ddl-auto: update
+
+#mysql 驱动
+
+spring:
+  jpa:
+    database: mysql
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot_mybatis?setUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: root
+
+  #redis
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password:
+    timeout: 5000
+    jedis:
+      pool:
+        max-idle: 8
+        max-wait: -1
+        max-active: 8
+        min-idle: 0
+
+
 
 mybatis.mapperLocations: classpath:/mapper/*.xml
 mybatis.typeAliasesPackag: com.cloud.springboot.entity
@@ -24,11 +52,10 @@ spring.devtools.restart.enabled: true
 #classpath目录下的WEB-INF文件夹内容修改不重启
 spring.devtools.restart.exclude: WEB-INF/**
 
-#cas
-cas.server-url-prefix: http://127.0.0.1:8080/cas
-cas.server-login-url: http://127.0.0.1:8080/cas/login
-cas.client-host-url: http://127.0.0.1:8082
-cas.validation-type: CAS
-cas:
-  authentication-url-patterns:
+
+
+
+
+
+
 
