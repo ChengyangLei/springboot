@@ -12,4 +12,11 @@ mock test 测试： https://blog.csdn.net/jy02268879/article/details/83346701
 mabatis-generator需要的jar包 5.1.35
 
 
-admin/admin
+登录用户：admin/admin
+
+
+
+
+
+
+需要的环境：redis，mysql
